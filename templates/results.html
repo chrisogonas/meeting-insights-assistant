@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meeting Insights Results</title>
+    <style>
+        body { font-family: sans-serif; }
+        pre { background-color: #f4f4f4; padding: 1em; white-space: pre-wrap; word-wrap: break-word; }
+        .section { margin-bottom: 2em; }
+        h2 { border-bottom: 1px solid #ccc; padding-bottom: 0.3em;}
+    </style>
+</head>
+<body>
+    <h1>Meeting Insights Results</h1>
+
+    <div class="section">
+        <h2>Raw Transcript</h2>
+        <pre>{{ raw_transcript }}</pre>
+    </div>
+
+    <div class="section">
+        <h2>Meeting Summary</h2>
+        <pre>{{ summary }}</pre>
+    </div>
+
+    <div class="section">
+        <h2>Action Items</h2>
+        <pre>{{ action_items }}</pre>
+    </div>
+
+    <hr>
+
+    <div class="section">
+        <h2>Email Preview</h2>
+        <p><strong>To:</strong> {{ email_recipients }}</p>
+        <p><strong>Subject:</strong> {{ email_subject }}</p>
+        <pre>{{ email_body }}</pre>
+        <!-- In a real app, this would be a form with a "Send Email" button -->
+        <button onclick="alert('Email sending not implemented in this example.')">Send Email (Mock)</button>
+    </div>
+
+    <p><a href="/">Process another meeting</a></p>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Identify Speakers</title>
+</head>
+<body>
+    <h1>Identify Meeting Participants</h1>
+    <p>Please map the detected speaker tags to participant names and emails.</p>
+    <form method="post" action="/analyze">
+        {% for tag in speaker_tags %}
+        <div>
+            <h3>Speaker {{ tag }}</h3>
+            <label for="name_speaker_{{ tag }}">Name:</label>
+            <input type="text" id="name_speaker_{{ tag }}" name="name_speaker_{{ tag }}" required>
+            <br>
+            <label for="email_speaker_{{ tag }}">Email:</label>
+            <input type="email" id="email_speaker_{{ tag }}" name="email_speaker_{{ tag }}" required>
+            <br><br>
+             <!-- Optional: Could add short audio snippets here for identification -->
+        </div>
+        {% endfor %}
+        <input type="submit" value="Generate Summary & Actions">
+    </form>
+</body>
+</html>

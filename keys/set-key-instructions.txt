@@ -1,0 +1,14 @@
+To create this file:
+
+1. Go to Google Cloud Console
+2. Navigate to IAM & Admin > Service Accounts
+3. Select your project (gen-lang-client-0377855023)
+4. Create or select an existing service account
+5. Go to Keys tab
+6. Click "Add Key" > "Create New Key"
+7. Select JSON format
+8. Download the key file
+
+After downloading, set the environment variable:
+
+set GOOGLE_APPLICATION_CREDENTIALS=C:\path\to\your-service-account-key.json

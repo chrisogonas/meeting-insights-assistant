@@ -1,0 +1,4 @@
+Flask>=2.0
+google-cloud-speech>=2.15
+google-cloud-aiplatform>=1.25 # Or google-generativeai if using direct API key
+google-auth>=2.15
